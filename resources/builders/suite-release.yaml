@@ -240,6 +240,14 @@ jobGroups:
        directives      :  += -DskipDefault -P common
        versionProperty :  pentaho-hadoop-shims.version
 
+  1420:
+        - jobID           :  big-data-hadoop-shims
+          scmUrl          :  https://github.com/pentaho/pentaho-hadoop-shims.git
+          directives      :  += -DskipDefault -P all
+          archivable      :  true
+          root            :  shims
+          versionProperty :  pentaho-hadoop-shims.version
+
   1500:
      - jobID           :  big-data-splunk-plugin
        scmUrl          :  https://github.com/pentaho/pentaho-splunk-plugin.git
@@ -456,6 +464,13 @@ jobGroups:
        versionProperty :  pentaho-reporting-plugin.version
 
   3000:
+     - jobID           :  big-data-hadoop-shims-ee
+       scmUrl          :  https://github.com/pentaho/pentaho-big-data-ee.git
+       directives      :  += -DskipDefault -P base,all -Deula-wrap
+       archivable      :  true
+       atomicScmCheckout: true
+       versionProperty :  pentaho-hadoop-shims.version
+
      - jobID           :  cda-plugin
        scmUrl          :  https://github.com/webdetails/cda.git
        versionProperty :  pentaho-cda-plugin.version
